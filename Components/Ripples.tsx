@@ -39,8 +39,8 @@ function BufferPoints({ count = 100 }) {
 
   useFrame(() => {
     if (ref.current) {
-      const positions = ref.current.geometry.attributes.position.array;
-      const scales = ref.current.geometry.attributes.scale.array;
+      const positions = ref.current.geometry.attributes.position["array"];
+      const scales = ref.current.geometry.attributes.scale["array"];
 
       let i = 0,
         j = 0;
@@ -122,7 +122,7 @@ const Ripples = (props: Props) => {
           fov: 45,
           near: 1,
           far: 5000,
-          position: [0, 500, 1500],
+          position: [0, 500, 1000],
           rotation: [-0.5, 0, 0],
         }}
       >
