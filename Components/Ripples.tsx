@@ -39,7 +39,9 @@ function BufferPoints({ count = 100 }) {
 
   useFrame(() => {
     if (ref.current) {
+      // @ts-ignore
       const positions = ref.current.geometry.attributes.position["array"];
+      // @ts-ignore
       const scales = ref.current.geometry.attributes.scale["array"];
 
       let i = 0,
@@ -59,9 +61,9 @@ function BufferPoints({ count = 100 }) {
           j++;
         }
       }
-
+      // @ts-ignore
       ref.current.geometry.attributes.position.needsUpdate = true;
-
+      // @ts-ignore
       ref.current.geometry.attributes.scale.needsUpdate = true;
       count += 0.045;
     }
